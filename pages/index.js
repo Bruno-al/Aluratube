@@ -5,6 +5,7 @@ import Menu from "../src/components/Menu"
 import { StyledTimeline } from "../src/components/Timeline";
 
 
+
 function HomePage() {
     
     const estiloDaHomePage ={
@@ -40,19 +41,22 @@ const StyledHeader = styled.div`
         border-radius: 50%;
      }
     .user-info{
-        margin-top: 50px;
         width: 100%;
         display: flex;
         align-items: center;
         padding: 16px 32px;
         gap: 16px;
     }
-
+    .bunner{
+        max-height: 300px;
+        width: 100%;
+        height: 50%;
+    }
 `;
 function Header(){
     return(
         <StyledHeader>
-           {/* <img src={"bunner"}/> */}
+           <img className="bunner" src={config.bunner}/>
            <section className="user-info">
                <img src={`https://github.com//${config.github}.png`}/>
                <div>
@@ -83,7 +87,7 @@ function TimeLine(props){
                             {videos.map((video)=>{
                     
                     return (
-                        <a href={video.url}>
+                        <a href={video.url} target="_blank">
                           <img src={video.thumb}/>
                           <span>
                           {video.title}

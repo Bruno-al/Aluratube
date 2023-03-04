@@ -1,7 +1,8 @@
 {
-    "name": "Mario Souto (DevSoutinho)",
-    "job": "Lead Software Engineer",
-    "github": "omariosouto",
+    "name": "Bruno Assis",
+    "job": "Estudante Software Engineer",
+    "github": "Bruno-al",
+    "bunner": "https://www.teahub.io/photos/full/6-69261_black-and-blue-youtube-channel-art.jpg",
     "playlists": {
       "jogos": [
           {
@@ -128,6 +129,18 @@
           "title": "O que é o C#? #HipstersPontoTube",
           "url": "https://www.youtube.com/watch?v=0JWMVc1CqpA",
           "thumb": "https://img.youtube.com/vi/0JWMVc1CqpA/hqdefault.jpg"
+        }
+      ],
+      "Comédia":[
+        {
+          "title": "PRIMEIRA PEDRA",
+          "url": "https://www.youtube.com/watch?v=1AngUf-YvHw",
+          "thumb": "https://img.youtube.com/vi/1AngUf-YvHw/maxresdefault.jpg"
+        },
+        {
+          "title": "SPY X FAMILY - O ANIME LA DA ANYAKKKKKK",
+          "url": "https://www.youtube.com/watch?v=wwE3EAmZKHQ&list=LL&index=24",
+          "thumb": "https://img.youtube.com/vi/wwE3EAmZKHQ/maxresdefault.jpg"
         }
       ]
     }

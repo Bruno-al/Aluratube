@@ -1,7 +1,6 @@
 import react from "react"
 import config from "../config.json"
 import styled from "styled-components"
-import { CSSReset } from "../src/components/reset"
 import Menu from "../src/components/Menu/index"
 import { StyledTimeline } from "../src/components/Timeline";
 
@@ -17,8 +16,8 @@ function HomePage() {
     // const valorDoFiter = "PR"
     return (
         <> 
-        <CSSReset/>
-        <div style={estiloDaHomePage}>
+        
+        <div style={estiloDaHomePage}> 
         <Menu valorDoFltro={valorDoFiter} setValorDofilter={setValorDofilter} />
         <Header/>
         <TimeLine searchValue={valorDoFiter} playlists={config.playlists}/>
@@ -30,15 +29,10 @@ function HomePage() {
   
   export default HomePage
 
-// function Menu(){
-//     return(
-//         <div>
-//            Menu
-//         </div>
-//     )
-// }
 
 const StyledHeader = styled.div`
+    background-color: ${({theme})=> theme.backgroundLevel1};
+    
      .user-info img{
         width: 80px;
         height: 80px;
@@ -58,8 +52,8 @@ const StyledBanner = styled.div`
      background-position: top;
      background-size: cover;
      background-repeat: no-repeat;
-     height: 50vh;
-     max-height: 380px;
+     height: 350px;
+     max-height: 60vh;
 `;
 
 

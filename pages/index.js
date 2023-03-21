@@ -10,7 +10,7 @@ import { StyledTimeline } from "../src/components/Timeline";
 function HomePage() {
     
     const estiloDaHomePage ={
-
+       
     }
     const [valorDoFiter,setValorDofilter] = react.useState('');
     // const valorDoFiter = "PR"
@@ -48,12 +48,11 @@ const StyledHeader = styled.div`
 `;
 const StyledBanner = styled.div`
      width: 100%;
-     background-image: url("https://images.unsplash.com/photo-1614583225154-5fcdda07019e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=890&q=80");
+     background-image: url("https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80");
      background-position: top;
      background-size: cover;
      background-repeat: no-repeat;
-     height: 350px;
-     max-height: 60vh;
+     height: 280px;
 `;
 
 

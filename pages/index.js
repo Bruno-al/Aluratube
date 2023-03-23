@@ -1,26 +1,47 @@
-import react from "react"
+import React from "react"
 import config from "../config.json"
 import styled from "styled-components"
 import Menu from "../src/components/Menu/index"
 import { StyledTimeline } from "../src/components/Timeline";
-
+import { videoService } from "../src/services/videoService";
 
 
 
 function HomePage() {
+    const service = videoService()
+    const [valorDoFiter,setValorDofilter] = React.useState('');
+    // const playlists = {};
+    const [playlists , setPlayLists] = React.useState({})
+
+    React.useEffect(()=>{
+        service
+            .getAllVideos()
+            .then((dados) => {
+                console.log(dados.data);
+                
+                const novasPlaylists = {};
+                dados.data.forEach((video) => {
+                    if (!novasPlaylists[video.playlist]) novasPlaylists[video.playlist] = [];
+                    novasPlaylists[video.playlist] = [
+                        video,
+                        ...novasPlaylists[video.playlist],
+                    ];
+                });
+
+                setPlayLists(novasPlaylists);
+            });
+    }, []);
+
     
-    const estiloDaHomePage ={
-       
-    }
-    const [valorDoFiter,setValorDofilter] = react.useState('');
-    // const valorDoFiter = "PR"
+   
+    const estiloDaHomePage ={}
     return (
         <> 
         
         <div style={estiloDaHomePage}> 
         <Menu valorDoFltro={valorDoFiter} setValorDofilter={setValorDofilter} />
         <Header/>
-        <TimeLine searchValue={valorDoFiter} playlists={config.playlists}/>
+        <TimeLine searchValue={valorDoFiter} playlists={playlists}/>
         </div>
         
     </>
